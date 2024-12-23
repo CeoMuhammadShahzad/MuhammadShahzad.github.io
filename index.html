@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Muhammad Shahzad Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">MS</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#Services-section" class="nav-link"><span>Services</span></a></li>
+			  <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Muhammad Shahzad</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Amazon Virtual Assistant  ',
+						'E-commerce Specialist  ',
+						'Aspiring Entrepreneur   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Amazon Specialist</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.upwork.com/freelancers/~018d74fa66a434d029?mp_source=share" class="btn btn-primary py-3 px-4">Upwork</a> 
+							<!-- <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Muhammad Shahzad</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Amazon Virtual Assistant, E commerce Specialist</span></p>
+										<p><span class="title-s">Experience: </span> <span>6+ months of hands-on experience in Amazon services, since completing training in July 2024</span></p>
+										<p><span class="title-s">Address: </span> <span>Lahore,  Pakistan</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Amazon Product Research</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Listing Optimization</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Inventory Management</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Product Analysis</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Amazon Account Management</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a passionate and results-driven E-commerce Specialist with expertise in Amazon business models. From identifying high-potential products to optimizing listings and managing accounts, I help businesses scale their online presence and maximize profits. Armed with a solid background in Amazon Virtual Assistance and hands-on experience in wholesale, private label, and arbitrage strategies, I aim to deliver exceptional value and results for my clients.
+
+									
+									My mission? To create thriving brands and become a game-changer in the e-commerce world. With a keen eye for detail, a commitment to excellence, and a hunger for innovation, I’m ready to help you conquer the marketplace. Let’s build success together!</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li> -->
+									<li class="d-flex"><span>Domain:</span> <span>Ecommerce, &amp; Amazon Business Models</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Commerce</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>Tools:</span> <span>Keepa, Helium 10, Amz Revenue Calculator &amp; Amazon Seller Board</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Microsoft Word, Excel, PowerPoint, Google Sheet &amp; Customer Service, Written Communication, Seo</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Business Development, Networking, Entrepreneurship, Driving</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/muhammad-shahzad-bb1904319" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+	<section class="ftco-section ftco-no-pb" id="Services-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big-4">Services</h1>
+			  <div class="underline"></div>
+            <!-- <p>Experienced Amazon Virtual Assistant with expertise in product hunting, listing creation, inventory management, and account management. Skilled in Amazon FBA, wholesale, and online arbitrage strategies. Dedicated to helping businesses grow by optimizing their Amazon operations and maximizing sales.</p> -->
+          </div>
+		  <div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<!-- <p><a href="https://drive.google.com/file/d/1GvhfHJjS6qNtj8bg4vUnye3-US3MW1e_/view?usp=drivesdk" class="btn btn-primary py-4 px-5">Download Resume</a></p> -->
+			</div>
+		</div>
+        </div>
+
+		
+
+		<!-- <div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br> -->
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<!-- <span class="date">2024-Present</span> -->
+						<h2>Amazon Wholesale Services</h2>
+						<!-- <span class="position">Self Employed</span> -->
+						<!-- <p class="mt-4">Self-employed as an Amazon Virtual Assistant, delivering tailored e-commerce solutions to clients worldwide.  -->
+							<ul>
+								<li>Finding reliable suppliers and negotiating contracts.		</li>
+								<li>Analyzing supplier catalogs to identify profitable products.		</li>
+								<li>Placing orders and managing inventory in Seller Central. </li>
+								<li>Coordinating FBA shipments and ensuring smooth fulfillment.		</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<!-- <span class="date">2024-Present</span> -->
+						<h2>Product Research and Analysis</h2>
+						<!-- <span class="position">Self Employed, Freelancer</span> -->
+						<!-- <p class="mt-4">Self-employed as an Amazon Wholesale Specialist, delivering tailored e-commerce solutions to clients worldwide.  -->
+							<ul>
+								<li>Identifying high-demand, and low-competition products.								</li>
+								<li>Conducting market analysis using tools like Helium 10 and Jungle Scout and Keepa.								</li>
+								<li>Competitor research to position products effectively.								</li>
+								<li>Preparing detailed product viability reports.								</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<!-- <span class="date">2024-Present</span> -->
+						<h2>Online and Retail Arbitrage</h2>
+						<!-- <span class="position">Self Employed, Freelancer</span> -->
+						<!-- <p class="mt-4">Self-employed as an Amazon Wholesale Specialist, delivering tailored e-commerce solutions to clients worldwide.  -->
+							<ul>
+								<li>Sourcing profitable items from retail stores and online marketplaces.								</li>
+								<li>Price analysis and calculating return on investment (ROI).								</li>
+								<li>Ensuring compliance with Amazon policies for resale products.								</li>
+								<!-- <li>Delivered consistent results by analyzing sales trends, inventory turnover rates, and replenishment schedules to maintain smooth operations.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<!-- <span class="date">2024-Present</span> -->
+						<h2>Account Management</h2>
+						<!-- <span class="position">Self Employed, Freelancer</span> -->
+						<!-- <p class="mt-4">Self-employed as an Amazon Wholesale Specialist, delivering tailored e-commerce solutions to clients worldwide.  -->
+							<ul>
+								<li>Setting up and managing Amazon Seller Central accounts.								</li>
+								<li>Monitoring account health and resolving performance issues.								</li>
+								<li>Handling customer service and feedback management.								</li>
+								<!-- <li>Delivered consistent results by analyzing sales trends, inventory turnover rates, and replenishment schedules to maintain smooth operations.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<!-- <span class="date">2024-Present</span> -->
+						<h2>Listing Creation and Optimization</h2>
+						<!-- <span class="position">Self Employed, Freelancer</span> -->
+						<!-- <p class="mt-4">Self-employed as an Amazon Wholesale Specialist, delivering tailored e-commerce solutions to clients worldwide.  -->
+							<ul>
+								<li>Writing SEO-optimized titles, bullet points, and descriptions.								</li>
+								<li>Creating Enhanced Brand Content (A+ Content) for branded products.</li>
+								<li>Researching keywords to improve product visibility and sales.								</li>
+								<!-- <li>Delivered consistent results by analyzing sales trends, inventory turnover rates, and replenishment schedules to maintain smooth operations.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<!-- <span class="date">2024-Present</span> -->
+						<h2>Inventory Management</h2>
+						<!-- <span class="position">Self Employed, Freelancer</span> -->
+						<!-- <p class="mt-4">Self-employed as an Amazon Wholesale Specialist, delivering tailored e-commerce solutions to clients worldwide.  -->
+							<ul>
+								<li>Monitoring stock levels and preventing stockouts.								</li>
+								<li>Forecasting demand and planning inventory replenishment.								</li>
+								<li>Tracking inventory performance and making adjustments to increase sales.								</li>
+								<!-- <li>Delivered consistent results by analyzing sales trends, inventory turnover rates, and replenishment schedules to maintain smooth operations.</li> -->
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+    </section>
+
+
+
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Experienced Amazon Virtual Assistant with expertise in product hunting, listing creation, inventory management, and account management. Skilled in Amazon FBA, wholesale, and online arbitrage strategies. Dedicated to helping businesses grow by optimizing their Amazon operations and maximizing sales.</p>
+          </div>
+		  <div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://drive.google.com/file/d/1GvhfHJjS6qNtj8bg4vUnye3-US3MW1e_/view?usp=drivesdk" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+			</div>
+		</div>
+        </div>
+
+		
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-Present</span>
+						<h2>Amazon Virtual Assistant</h2>
+						<span class="position">Self Employed</span>
+						<p class="mt-4">Self-employed as an Amazon Virtual Assistant, delivering tailored e-commerce solutions to clients worldwide. 
+							<ul>
+								<li>Conducted product hunting and analysis, identifying high-demand, low-competition products for private label, wholesale, and arbitrage business models.								</li>
+								<li>Managed inventory and listing creation on Amazon Seller Central, ensuring optimized SEO and appealing product descriptions to improve visibility and sales performance.</li>
+								<li>Provided account management services, ensuring compliance with Amazon policies and resolving issues related to product listings, account health, and Buy Box optimization.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2024-Present</span>
+						<h2>Amazon Wholesale Specialist</h2>
+						<span class="position">Self Employed, Freelancer</span>
+						<p class="mt-4">Self-employed as an Amazon Wholesale Specialist, delivering tailored e-commerce solutions to clients worldwide. 
+							<ul>
+								<li>Developed profitable B2B relationships with suppliers and manufacturers, negotiating minimum order quantities (MOQs) for wholesale deals.</li>
+								<li>Conducted product sourcing using strategies like reverse sourcing and storefront analysis to identify opportunities for maximum profit margins.</li>
+								<li>Oversaw the entire supply chain process, from purchase order (PO) creation to product shipment and delivery to Amazon fulfillment centers (FBA).</li>
+								<li>Delivered consistent results by analyzing sales trends, inventory turnover rates, and replenishment schedules to maintain smooth operations.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023-2027</span>
+    					<h2>Bachelor of Science in Commerce</h2>
+    					<span class="position">Superior University University</span>
+    					<p class="mt-4">Grade: A+</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024-2024</span>
+    					<h2>Amazon Specialist course</h2>
+    					<span class="position">Team 86 llc</span>
+    					<p class="mt-4">Grade: A+</p>
+    				</div>
+				</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2021-2023</span>
+    					<h2>Intermediate in Commerce</h2>
+    					<span class="position">Private Institute</span>
+    					<p class="mt-4">Grade: A</p>
+    				</div>
+				</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2009-2021</span>
+    					<h2>Matriculation in Computer Science</h2>
+    					<span class="position">Ali Al Murad High School</span>
+    					<p class="mt-4">Grade: A+</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<!-- <p><a href="https://drive.google.com/file/d/1GvhfHJjS6qNtj8bg4vUnye3-US3MW1e_/view?usp=drivesdk" class="btn btn-primary py-4 px-5">Download CV</a></p> -->
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Amazon wholesale model, Product research and analysis, and Online and Retail Arbitrage.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">Amazon Wholesale Model</a></h3>
+                <p>This project focused on transforming a standard Amazon store into a high-performing revenue generator using the wholesale model. Key achievements included negotiating with suppliers for premium-quality products at competitive rates and conducting in-depth product research to meet market demands. Managed the entire supply chain, from supplier selection to FBA inventory optimization, ensuring smooth operations. Efficient replenishment schedules were designed to prevent stockouts and maintain consistent sales, resulting in a 35% revenue growth in just six months.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">Product Research AND Analysis</a></h3>
+                <p>The goal of this project was to discover high-demand, low-competition products for long-term profitability. By leveraging advanced tools like Helium 10 and Jungle Scout and Keepa, detailed market trends and opportunities were analyzed. Comprehensive, data-driven reports were created to guide strategic product launches. The approach focused on filling market gaps, leading to the successful launch of three products, boosting client revenue by 40% during Q4.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="#">Online And Retail Arbitrage</a></h3>
+                <p>This project showcased the potential of sourcing underpriced goods for resale on Amazon through online and retail arbitrage. By scanning products using tools like SellerAmp, profitable items were sourced from platforms like eBay and stores like Costco. Competitive pricing strategies ensured Buy Box wins, while efficient workflows optimized inventory management. These efforts resulted in a 25% profit increase for the client within three months.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">Updated Soon                      </a></h3>
+				  <!-- <p>Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p> -->
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="#">Updated Soon                                      </a></h3>
+				  <!-- <p>Developed a ML model to give various recommendations of financial products &amp; services on target customer groups.</p> -->
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="50">0</strong>
+                <span>Recieved Inquiries</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>Amazon Virtual Assistant<span> Inquiry Form  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfQrTMhk2fjW_lWpt_-t4KRbifwNG5cMQaEDUz8w3CVuv9bcw/viewform" class="btn btn-primary py-3 px-5">Inquiry</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Lahore, Pakistan</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number (Only for What's app)</h3>
+	            <p><a href="tel://7903724047">+44 7903 724047</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:mianshahzadbusiness@gmail.com">mianshahzadbusiness@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download CV</h3>
+	            <p><a href="https://drive.google.com/file/d/1GvhfHJjS6qNtj8bg4vUnye3-US3MW1e_/view?usp=drivesdk">Cvlink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCts5wKJEkM66XwodkAN7uOc_5iqdxdClTTtXMNQuQ7B_1dQ/viewform" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/muhammad-shahzad-bb1904319"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.facebook.com/share/RbV4H7xBPyQ61KTg/?mibextid=wwXIfr"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/ceomuhammadshahzad/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <i class="icon-heart color-danger" aria-hidden="true"></i> Muhammad <a href="#" target="_blank">Shahzad</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
